@@ -19,7 +19,7 @@
                                 class="mr-3">
                             </v-icon>
                         </template>
-                        <v-list-item-title class="text-body-2">
+                        <v-list-item-title class="text-body-2" style="white-space: pre-line;">
                             {{ item.content }}
                         </v-list-item-title>
                     </v-list-item>
@@ -60,7 +60,7 @@ export default {
             listItems: [
                 { content: 'Fülle das Formular aus' },
                 { content: 'Klicke auf Absenden' },
-                { content: 'Du kannst wählen ob du Anonym bleiben möchtest' }
+                { content: 'Du kannst wählen ob du Anonym\nbleiben möchtest' }
             ]
         }
     },

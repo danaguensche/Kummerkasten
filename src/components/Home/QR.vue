@@ -52,7 +52,7 @@
                     </v-text-field>
                     
                     <v-select 
-                        v-model="select" 
+                        v-model="formData.category" 
                         :items="items" 
                         :rules="selectRules" 
                         label="Kategorie" 
@@ -126,6 +126,7 @@ export default {
             formData: {
                 firstname: '',
                 lastname: '',
+                category: '',
                 message: '',
                 anonymous: false
             },

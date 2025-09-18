@@ -5,27 +5,7 @@
                 Dein Anliegen
             </v-card-title>
             <v-divider class="mb-3"></v-divider>
-            
-            <!-- Erfolg/Fehler Meldungen -->
-            <v-alert
-                v-if="successMessage"
-                type="success"
-                variant="tonal"
-                class="mb-3"
-                closable
-                @click:close="successMessage = ''">
-                {{ successMessage }}
-            </v-alert>
-            
-            <v-alert
-                v-if="errorMessage"
-                type="error"
-                variant="tonal"
-                class="mb-3"
-                closable
-                @click:close="errorMessage = ''">
-                {{ errorMessage }}
-            </v-alert>
+        
             
             <v-card-text class="pa-0">
                 <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
@@ -82,6 +62,27 @@
                     </v-textarea>
                 </v-form>
             </v-card-text>
+
+                        <!-- Erfolg/Fehler Meldungen -->
+                        <v-alert
+                v-if="successMessage"
+                type="success"
+                variant="tonal"
+                class="mb-3"
+                closable
+                @click:close="successMessage = ''">
+                {{ successMessage }}
+            </v-alert>
+            
+            <v-alert
+                v-if="errorMessage"
+                type="error"
+                variant="tonal"
+                class="mb-3"
+                closable
+                @click:close="errorMessage = ''">
+                {{ errorMessage }}
+            </v-alert>
             
             <v-card-actions class="pa-0 pt-2">
                 <v-checkbox 

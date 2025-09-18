@@ -1,16 +1,18 @@
 <template>
     <Info></Info>
-    <h1>Hallooo</h1>
+    <Form></Form>
 </template>
 
 <script>
 
 import Info from './Info.vue';
+import Form from './Form.vue';
 
 export default {
     name: "Home",
     components: {
-        Info
+        Info,
+        Form
     },
 
 }

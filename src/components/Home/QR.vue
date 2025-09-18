@@ -1,16 +1,19 @@
 <template>
-    <v-card class="mx-auto elevation-4 pa-4 mt-6 mb-6" max-width="600" rounded="lg">
-        <v-card-title class="text-h5 text-indigo-darken-2 font-weight-bold text-center" primary-title>
+    <v-card class="mx-auto elevation-4 pa-3 mt-3 mb-3" max-width="350" rounded="lg">
+        <v-card-title class="text-h6 text-indigo-darken-2 font-weight-bold text-center pa-2" primary-title>
             Teile diesen Kummerkasten
         </v-card-title>
-        <v-card-subtitle class="text-center mb-4">
+        <v-card-subtitle class="text-center text-body-2 pa-1 mb-2">
             Scanne den QR Code mit deinem Smartphone
         </v-card-subtitle>
-
-        <v-divider class="mb-4"></v-divider>
-
-        <v-img class="mx-auto my-4" max-width="200" :src="qrCodeImage" alt="QR Code zum Kummerkasten"></v-img>
-
+        <v-divider class="mb-3"></v-divider>
+        <v-img 
+            class="mx-auto my-2" 
+            max-width="150" 
+            :src="qrCodeImage" 
+            alt="QR Code zum Kummerkasten"
+            aspect-ratio="1">
+        </v-img>
     </v-card>
 </template>
 
@@ -24,5 +27,4 @@ export default {
         }
     }
 }
-
 </script>

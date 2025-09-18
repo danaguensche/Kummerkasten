@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="page">
     <router-view></router-view>
   </div>
 </template>
@@ -11,3 +11,11 @@ export default {
 };
 
 </script>
+
+<style>
+.page {
+    background-image: url('./img/v904-nunny-012.jpg');
+    background-size: cover;
+}
+
+</style>

@@ -5,7 +5,7 @@ import Form from './components/Home/Form.vue';
 import QR from './components/Home/QR.vue';
 
 const routes = [{
-        path: '/home',
+        path: '/home' || '/',
         name: 'Home',
         component: KummerkastenPage
     },

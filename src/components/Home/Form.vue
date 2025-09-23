@@ -179,8 +179,8 @@ export default {
 
                 if(this.formData.anonymous) {
                     this.formData.anonymous = 'Ja';
-                    this.formData.firstname = '';
-                    this.formData.lastname = '';
+                    this.formData.firstname = 'Anonym';
+                    this.formData.lastname = 'Anonym';
                 } else {
                     this.formData.anonymous = 'Nein';
                 }

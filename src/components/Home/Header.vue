@@ -12,8 +12,8 @@
                 Dein Kummerkasten
             </v-card-title>
 
-            <v-card-subtitle class="text-body-2 text-center pa-2 mb-4">
-                Deine Stimme zählt - teile uns deine Sorgen mit
+            <v-card-subtitle class="text-body-2 text-center pa-2 mb-4" style="white-space: pre-line;">
+                {{ subtitle }}
             </v-card-subtitle>
 
             <v-card-actions class="justify-center pa-2">
@@ -33,7 +33,8 @@ export default {
     name: "Header",
     data() {
         return {
-            router
+            router,
+            subtitle: 'Deine Stimme zählt - teile uns deine\nSorgen mit, anonym und sicher.'
         }
     }
 }

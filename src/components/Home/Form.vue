@@ -139,12 +139,14 @@
 </template>
 
 <script>
+import router from '@/router';
 import emailjs from 'emailjs-com';
 
 export default {
     name: 'Form',
     data() {
         return {
+            router: this.$router,
             valid: false,
             loading: false,
             successMessage: '',

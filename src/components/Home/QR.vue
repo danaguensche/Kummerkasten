@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import qrCodeImage from '../../img/myqrcode_69522.png';
+import qrCodeImage from '../../img/qr-jugendhilfe.png';
 export default {
     name: "QR",
     data() {

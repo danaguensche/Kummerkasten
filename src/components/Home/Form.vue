@@ -86,6 +86,7 @@
             
             <v-card-actions class="pa-0 pt-2">
                 <v-checkbox 
+                    v-if="!sucess"
                     v-model="formData.anonymous" 
                     label="Anonym bleiben" 
                     color="indigo-darken-2"
@@ -97,6 +98,7 @@
                 <v-spacer></v-spacer>
                 
                 <v-btn 
+                    v-if="!sucess"
                     color="indigo-darken-2" 
                     variant="elevated" 
                     size="small" 
@@ -107,6 +109,29 @@
                     @click="submitForm">
                     <v-icon class="mr-1" size="small">mdi-send</v-icon>
                     Absenden
+                </v-btn>
+
+                <v-btn
+                    v-if="sucess"
+                    color="indigo-darken-2"
+                    variant="outlined"
+                    size="small"
+                    rounded="pill"
+                    class="px-4 font-weight-bold flex-grow-1 mr-2"
+                    @click="router.push('/info')">
+                    <v-icon class="mr-1" size="small">mdi-arrow-left</v-icon>
+                    Zurück
+                </v-btn>
+                <v-btn
+                    v-if="sucess"
+                    color="indigo-darken-2"
+                    variant="elevated"
+                    size="small"
+                    rounded="pill"
+                    class="px-4 font-weight-bold flex-grow-1"
+                    @click="router.push('/qr')">
+                    Weiter
+                    <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>
             </v-card-actions>
         </v-card>
@@ -139,7 +164,8 @@ export default {
                 v => !!v || 'Kategorie ist erforderlich'
             ],
             items: ['Regeln', 'Zimmer/Unterkunft', 'Essen', 'Betreuer/Personal', 'Sonstiges'],
-            select: null
+            select: null,
+            sucess: false
         };
     },
     methods: {
@@ -148,6 +174,14 @@ export default {
                 this.loading = true;
                 this.errorMessage = '';
                 this.successMessage = '';
+
+                if(this.formData.anonymous) {
+                    this.formData.anonymous = 'Ja';
+                    this.formData.firstname = '';
+                    this.formData.lastname = '';
+                } else {
+                    this.formData.anonymous = 'Nein';
+                }
                 
                 try {
                     // EmailJS Template Variablen
@@ -155,9 +189,9 @@ export default {
                         from_name: this.formData.anonymous ? 'Anonym' : `${this.formData.firstname} ${this.formData.lastname}`.trim() || 'Unbekannt',
                         firstname: this.formData.firstname || 'Nicht angegeben',
                         lastname: this.formData.lastname || 'Nicht angegeben',
-                        category: this.select,
+                        category: this.formData.category,
                         message: this.formData.message,
-                        anonymous: this.formData.anonymous ? 'Ja' : 'Nein',
+                        anonymous: this.formData.anonymous,
                         date: new Date().toLocaleDateString('de-DE'),
                         time: new Date().toLocaleTimeString('de-DE')
                     };
@@ -172,6 +206,7 @@ export default {
                     
                     // Erfolgsmeldung
                     this.successMessage = 'Deine Nachricht wurde erfolgreich gesendet! Vielen Dank für dein Vertrauen.';
+                    this.sucess = true;
                     
                     // Formular zurücksetzen
                     this.$refs.form.reset();

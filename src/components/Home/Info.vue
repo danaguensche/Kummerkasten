@@ -42,7 +42,7 @@
                     size="small"
                     rounded="pill"
                     class="px-4 font-weight-bold flex-grow-1"
-                    @click="router.push('/qr')">
+                    @click="router.push('/form')">
                     Weiter
                     <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>

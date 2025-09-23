@@ -20,19 +20,9 @@
                     size="small"
                     rounded="pill"
                     class="px-4 font-weight-bold flex-grow-1 mr-2"
-                    @click="router.push('/info')">
+                    @click="router.push('/form')">
                     <v-icon class="mr-1" size="small">mdi-arrow-left</v-icon>
                     Zurück
-                </v-btn>
-                <v-btn
-                    color="indigo-darken-2"
-                    variant="elevated"
-                    size="small"
-                    rounded="pill"
-                    class="px-4 font-weight-bold flex-grow-1"
-                    @click="router.push('/form')">
-                    Weiter
-                    <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>
             </v-card-actions>
         </v-card>

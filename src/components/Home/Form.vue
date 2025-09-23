@@ -100,6 +100,7 @@ export default {
             formData: {
                 firstname: '',
                 lastname: '',
+                roomnumber: '',
                 category: '',
                 message: '',
                 anonymous: false
@@ -127,6 +128,7 @@ export default {
                     this.formData.anonymous = 'Ja';
                     this.formData.firstname = 'Anonym';
                     this.formData.lastname = 'Anonym';
+                    this.formData.roomnumber = 'Anonym';
                 } else {
                     this.formData.anonymous = 'Nein';
                 }
@@ -137,6 +139,7 @@ export default {
                         from_name: this.formData.anonymous ? 'Anonym' : `${this.formData.firstname} ${this.formData.lastname}`.trim() || 'Unbekannt',
                         firstname: this.formData.firstname || 'Nicht angegeben',
                         lastname: this.formData.lastname || 'Nicht angegeben',
+                        roomnumber: this.formData.roomnumber || 'Nicht angegeben',
                         category: this.formData.category,
                         message: this.formData.message,
                         anonymous: this.formData.anonymous,

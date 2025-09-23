@@ -18,15 +18,24 @@
                         density="compact" prepend-inner-icon="mdi-account" class="mb-3" color="indigo-darken-2"
                         :disabled="loading">
                     </v-text-field>
-
+                    <v-row>
+                        <v-col cols="12" sm="6">
                             <v-text-field v-model="formData.roomnumber" label="Zimmernummer (optional)"
                                 variant="outlined" density="compact" prepend-inner-icon="mdi-door" class="mb-3"
                                 color="indigo-darken-2" :disabled="loading">
                             </v-text-field>
+                        </v-col>
+
+                        <v-col cols="12" sm="6">
+
                             <v-select v-model="formData.category" :items="items" :rules="selectRules" label="Kategorie"
                                 variant="outlined" density="compact" prepend-inner-icon="mdi-tag" class="mb-3"
                                 color="indigo-darken-2" required :disabled="loading">
                             </v-select>
+                        </v-col>
+                    </v-row>
+
+
 
                     <v-textarea v-model="formData.message" label="Deine Nachricht" :rules="messageRules" required
                         variant="outlined" density="compact" prepend-inner-icon="mdi-message-text" class="mb-3"

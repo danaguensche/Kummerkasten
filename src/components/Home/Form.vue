@@ -18,24 +18,11 @@
                         density="compact" prepend-inner-icon="mdi-account" class="mb-3" color="indigo-darken-2"
                         :disabled="loading">
                     </v-text-field>
-                    <v-row>
-                        <v-col cols="12" sm="6">
-                            <v-text-field v-model="formData.roomnumber" label="Zimmernummer (optional)"
-                                variant="outlined" density="compact" prepend-inner-icon="mdi-door" class="mb-3"
-                                color="indigo-darken-2" :disabled="loading">
-                            </v-text-field>
-                        </v-col>
 
-                        <v-col cols="12" sm="6">
-
-                            <v-select v-model="formData.category" :items="items" :rules="selectRules" label="Kategorie"
-                                variant="outlined" density="compact" prepend-inner-icon="mdi-tag" class="mb-3"
-                                color="indigo-darken-2" required :disabled="loading">
-                            </v-select>
-                        </v-col>
-                    </v-row>
-
-
+                    <v-select v-model="formData.category" :items="items" :rules="selectRules" label="Kategorie"
+                        variant="outlined" density="compact" prepend-inner-icon="mdi-tag" class="mb-3"
+                        color="indigo-darken-2" required :disabled="loading">
+                    </v-select>
 
                     <v-textarea v-model="formData.message" label="Deine Nachricht" :rules="messageRules" required
                         variant="outlined" density="compact" prepend-inner-icon="mdi-message-text" class="mb-3"
@@ -99,7 +86,6 @@ export default {
             formData: {
                 firstname: '',
                 lastname: '',
-                roomnumber: '',
                 category: '',
                 message: '',
                 anonymous: false
@@ -127,7 +113,6 @@ export default {
                     this.formData.anonymous = 'Ja';
                     this.formData.firstname = 'Anonym';
                     this.formData.lastname = 'Anonym';
-                    this.formData.roomnumber = 'Anonym';
                 } else {
                     this.formData.anonymous = 'Nein';
                 }
@@ -138,7 +123,6 @@ export default {
                         from_name: this.formData.anonymous ? 'Anonym' : `${this.formData.firstname} ${this.formData.lastname}`.trim() || 'Unbekannt',
                         firstname: this.formData.firstname || 'Nicht angegeben',
                         lastname: this.formData.lastname || 'Nicht angegeben',
-                        roomnumber: this.formData.roomnumber || 'Nicht angegeben',
                         category: this.formData.category,
                         message: this.formData.message,
                         anonymous: this.formData.anonymous,

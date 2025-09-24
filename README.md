@@ -1,29 +1,16 @@
-# Kummerkasten
+# ✉️ Kummerkasten
 
-This template should help get you started developing with Vue 3 in Vite.
+Ein einfacher digitaler Kummerkasten, programmiert mit **Vue.js** und gehostet auf **Vercel**.  
+Der Kummerkasten ermöglicht es Nutzer:innen, Nachrichten über ein kleines Dialog-Formular zu versenden.  
+Sie können selbst enttscheiden, ob sie Anonym bleiben möchten oder nicht, um dann persönliches Feedback zu ihrem Anliegen zu bekommen.  
+Die Nachrichten werden anschließend automatisch per **E-Mail** an das zuständige Personal weitergeleitet.  
 
-## Recommended IDE Setup
+## 📷 Screenshots  
+![Gif Kummerkasten with background](https://github.com/user-attachments/assets/250b4a7a-0ab5-46fc-bf31-fd3ce25ac6cd)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🛠️ Technologie-Stack
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Vue.js
+- Vuetify
+- EmailJS
+- Vercel (Hosting & Deployment)

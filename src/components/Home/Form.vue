@@ -132,7 +132,7 @@ export default {
 
                     // E-Mail über EmailJS senden
                     await emailjs.send(
-                        'service_7u6xfpo',      //Service ID
+                        'service_1tqm9gv',      //Service ID
                         'template_n9tvcd7',     //Template ID
                         templateParams,
                         'mhUHetv55RImbj_Mv'          //user ID

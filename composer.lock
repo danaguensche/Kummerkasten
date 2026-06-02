@@ -1,0 +1,280 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0b3101be18777ebc8ca819e24ea91b63",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "jetbrains/phpstorm-attributes",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JetBrains/phpstorm-attributes.git",
+                "reference": "64de815a4509c29e00d5e3474087fd24c171afc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JetBrains/phpstorm-attributes/zipball/64de815a4509c29e00d5e3474087fd24c171afc2",
+                "reference": "64de815a4509c29e00d5e3474087fd24c171afc2",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JetBrains\\PhpStorm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "JetBrains",
+                    "homepage": "https://www.jetbrains.com"
+                }
+            ],
+            "description": "PhpStorm specific attributes",
+            "keywords": [
+                "attributes",
+                "jetbrains",
+                "phpstorm"
+            ],
+            "support": {
+                "issues": "https://youtrack.jetbrains.com/newIssue?project=WI",
+                "source": "https://github.com/JetBrains/phpstorm-attributes/tree/1.2"
+            },
+            "time": "2024-10-11T10:46:19+00:00"
+        },
+        {
+            "name": "nette/tester",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tester.git",
+                "reference": "9636bb2dc01582a40bfb62ded048f5726761461e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tester/zipball/9636bb2dc01582a40bfb62ded048f5726761461e",
+                "reference": "9636bb2dc01582a40bfb62ded048f5726761461e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "8.0 - 8.5"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "nette/phpstan-rules": "^1.0",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable"
+            },
+            "default-branch": true,
+            "bin": [
+                "src/tester"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tester\\": "src"
+                },
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Miloslav Hůla",
+                    "homepage": "https://github.com/milo"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Tester: enjoyable unit testing in PHP with code coverage reporter. 🍏🍏🍎🍏",
+            "homepage": "https://tester.nette.org",
+            "keywords": [
+                "Xdebug",
+                "assertions",
+                "clover",
+                "code coverage",
+                "nette",
+                "pcov",
+                "phpdbg",
+                "phpunit",
+                "testing",
+                "unit"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/tester/issues",
+                "source": "https://github.com/nette/tester/tree/master"
+            },
+            "time": "2026-05-29T06:51:10+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "1.12.x-dev",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/37982d6fc7cbb746dda7773530cda557cdf119e1",
+                "reference": "37982d6fc7cbb746dda7773530cda557cdf119e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-02-28T20:30:03+00:00"
+        },
+        {
+            "name": "tracy/tracy",
+            "version": "v2.13.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "61772f4540d87dbee72b8fa29c119ba0237fcf44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/61772f4540d87dbee72b8fa29c119ba0237fcf44",
+                "reference": "61772f4540d87dbee72b8fa29c119ba0237fcf44",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-session": "*",
+                "php": "8.2 - 8.5"
+            },
+            "conflict": {
+                "nette/di": "<3.0"
+            },
+            "require-dev": {
+                "latte/latte": "^2.5 || ^3.0",
+                "nette/di": "^3.0",
+                "nette/http": "^3.0",
+                "nette/mail": "^3.0 || ^4.0",
+                "nette/phpstan-rules": "^1.0",
+                "nette/tester": "^2.6",
+                "nette/utils": "^3.0 || ^4.0",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
+                "psr/log": "^1.0 || ^2.0 || ^3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.13-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Tracy/functions.php"
+                ],
+                "psr-4": {
+                    "Tracy\\": "src"
+                },
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "😎  Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
+            "homepage": "https://tracy.nette.org",
+            "keywords": [
+                "Xdebug",
+                "debug",
+                "debugger",
+                "nette",
+                "profiler"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/tracy/issues",
+                "source": "https://github.com/nette/tracy/tree/v2.13"
+            },
+            "time": "2026-05-19T17:28:40+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "jetbrains/phpstorm-attributes": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "8.0 - 8.4"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

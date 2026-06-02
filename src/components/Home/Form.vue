@@ -200,7 +200,7 @@ export default {
                     time:     new Date().toLocaleTimeString('de-DE')
                 };
 
-                const response = await fetch('/mail.php', {
+                const response = await fetch('phpmails/mail.php', {
                     method:  'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body:    JSON.stringify(payload)

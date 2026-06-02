@@ -5,11 +5,19 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+    name: 'App',
+    data() {
+        return {
+            selectedLang: 'de',
+        };
+    },
+    provide() {
+        return {
+            lang: this,
+        };
+    },
 };
-
 </script>
 
 <style>

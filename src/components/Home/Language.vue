@@ -45,13 +45,13 @@
             <v-card-actions class="pa-0 pt-2 justify-center">
 
                 <v-btn v-if="selectedLang == 'de'" color="indigo-darken-2" variant="elevated" size="small" rounded="pill"
-                    class="px-4 font-weight-bold" :disabled="!selectedLang" @click="router.push('/info')">
+                    class="px-4 font-weight-bold" :disabled="!selectedLang" @click="router.push('/home')">
                     Weiter
                     <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>
 
                 <v-btn v-else color="indigo-darken-2" variant="elevated" size="small" rounded="pill"
-                    class="px-4 font-weight-bold " :disabled="!selectedLang" @click="router.push('/info')">
+                    class="px-4 font-weight-bold " :disabled="!selectedLang" @click="router.push('/home')">
                     Continue
                     <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>

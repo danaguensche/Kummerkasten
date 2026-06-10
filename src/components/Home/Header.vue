@@ -1,6 +1,6 @@
 <template>
     <v-container class="d-flex align-center justify-center" style="min-height: 100vh;">
-        <v-card class="mx-auto elevation-4 pa-6" max-width="400" rounded="lg">
+        <v-card class="mx-auto elevation-4 pa-6" width="350" rounded="lg">
             <div class="text-center mt-3 mb-4">
                 <v-icon size="40" color="indigo-darken-2"
                     class="ma-1 float-animation">mdi-comment-processing-outline</v-icon>
@@ -18,7 +18,7 @@
 
             <v-card-actions class="justify-center pa-2">
                 <v-btn color="indigo-darken-2" variant="outlined" size="small" rounded="pill"
-                    class="px-4 font-weight-bold flex-grow-1 mr-2" @click="router.push('/language')">
+                    class="px-4 font-weight-bold mr-2" @click="router.push('/language')">
                     <v-icon class="mr-1" size="small">mdi-arrow-left</v-icon>
                     Zurück
                 </v-btn>

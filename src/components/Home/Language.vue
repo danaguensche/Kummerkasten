@@ -1,6 +1,6 @@
 <template>
     <v-container class="d-flex align-center justify-center" style="min-height: 100vh;">
-        <v-card class="mx-auto elevation-4 pa-6" max-width="500" rounded="lg">
+        <v-card class="mx-auto elevation-4 pa-6 " width="350" rounded="lg">
             <v-card-title v-if="selectedLang == 'de'" class="text-h6 text-indigo-darken-2 font-weight-bold pa-0 mb-2">
                 Wähle deine Sprache aus
             </v-card-title>
@@ -42,16 +42,16 @@
                 </div>
             </v-card-text>
 
-            <v-card-actions class="pa-0 pt-2">
+            <v-card-actions class="pa-0 pt-2 justify-center">
 
                 <v-btn v-if="selectedLang == 'de'" color="indigo-darken-2" variant="elevated" size="small" rounded="pill"
-                    class="px-4 font-weight-bold flex-grow-1" :disabled="!selectedLang" @click="router.push('/info')">
+                    class="px-4 font-weight-bold" :disabled="!selectedLang" @click="router.push('/info')">
                     Weiter
                     <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>
 
                 <v-btn v-else color="indigo-darken-2" variant="elevated" size="small" rounded="pill"
-                    class="px-4 font-weight-bold flex-grow-1" :disabled="!selectedLang" @click="router.push('/info')">
+                    class="px-4 font-weight-bold " :disabled="!selectedLang" @click="router.push('/info')">
                     Continue
                     <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                 </v-btn>

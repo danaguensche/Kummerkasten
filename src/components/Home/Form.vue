@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class="pa-4 pa-sm-6 d-flex align-center justify-center" style="min-height: 100vh;">
-        <v-card class="mx-auto w-100 elevation-4 pa-4 pa-sm-6" style="max-width: 520px;" rounded="lg">
+        <v-card class="mx-auto elevation-4 pa-6 " width="350" rounded="lg">
 
             <!-- Header -->
             <div class="d-flex align-center ga-2 mb-2">

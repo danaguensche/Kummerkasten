@@ -1,6 +1,6 @@
 <template>
     <v-container class="d-flex align-center justify-center" style="min-height: 100vh;">
-        <v-card class="mx-auto elevation-4 pa-6" max-width="500" rounded="lg">
+        <v-card class="mx-auto elevation-4 pa-6" width="350" rounded="lg">
             <v-card-title class="text-h6 text-indigo-darken-2 font-weight-bold pa-0 mb-2" primary-title>
                 {{ content.title }}
             </v-card-title>

@@ -60,7 +60,7 @@ const translations = {
         listItems: [
             'Fülle das Formular aus',
             'Klicke auf Absenden',
-            'Du kannst wählen ob du Anonym\nbleiben möchtest',
+            'Deine Nachricht ist Anonym',
         ],
     },
     en: {
@@ -70,7 +70,7 @@ const translations = {
         listItems: [
             'Fill out the form',
             'Click on Submit',
-            'You can choose whether you want\nto stay anonymous',
+            'Your message is anonymous',
         ],
     },
 };

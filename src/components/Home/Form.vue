@@ -135,7 +135,7 @@ const translations = {
         privacyTitle: 'Privacy note:',
         privacyText: 'Your message is kept private. It will only be read by staff at this facility. We do not save your personal data or share it with anyone else.',
         privacyCheckbox: 'I have read the privacy note and agree.',
-        submit: 'Send',
+        submit: 'Submit',
         back: 'Back',
         next: 'Next',
         items: ['Rules', 'Room/Living', 'Food', 'Staff', 'Something else'],

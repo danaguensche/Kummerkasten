@@ -9,11 +9,11 @@
             </div>
 
             <v-card-title class="text-h6 text-indigo-darken-2 font-weight-bold text-center pa-2">
-                {{ t.title }}
+                {{ translate.title }}
             </v-card-title>
 
             <v-card-subtitle class="text-body-2 text-center pa-2 mb-4" style="white-space: pre-line;">
-                {{ t.subtitle }}
+                {{ translate.subtitle }}
             </v-card-subtitle>
 
             <v-card-actions class="justify-center pa-2">
@@ -25,7 +25,7 @@
                 <v-btn color="indigo-darken-2" variant="elevated" size="small" rounded="pill"
                     class="px-5 font-weight-bold" @click="router.push('/info')">
                     <v-icon class="mr-1" size="small">mdi-arrow-right</v-icon>
-                    {{ t.next }}
+                    {{ translate.next }}
                 </v-btn>
             </v-card-actions>
         </v-card>
@@ -55,7 +55,7 @@ export default {
         return { router };
     },
     computed: {
-        t() {
+        translate() {
             return translations[this.lang.selectedLang] ?? translations.de;
         },
     },

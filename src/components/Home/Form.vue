@@ -5,7 +5,7 @@
             <!-- Header -->
             <div class="d-flex align-center ga-2 mb-2">
                 <v-card-title class="text-h6 text-indigo-darken-2 font-weight-bold pa-0">
-                    {{ t.title }}
+                    {{ translate.title }}
                 </v-card-title>
             </div>
             <v-divider class="mb-4"></v-divider>
@@ -14,26 +14,26 @@
                 <v-form ref="form" v-model="valid" @submit.prevent="submitForm">
 
                     <!-- Geschlecht -->
-                    <p class="text-body-2 text-medium-emphasis mb-1">{{ t.gender }} <span class="text-caption">({{
-                            t.optional }})</span></p>
+                    <p class="text-body-2 text-medium-emphasis mb-1">{{ translate.gender }} <span class="text-caption">({{
+                            translate.optional }})</span></p>
                     <v-radio-group v-model="formData.gender" inline hide-details class="mb-4">
-                        <v-radio :label="t.female" value="weiblich" color="indigo-darken-2" density="compact"
+                        <v-radio :label="translate.female" value="weiblich" color="indigo-darken-2" density="compact"
                             class="mr-2"></v-radio>
-                        <v-radio :label="t.male" value="männlich" color="indigo-darken-2" density="compact"
+                        <v-radio :label="translate.male" value="männlich" color="indigo-darken-2" density="compact"
                             class="mr-2"></v-radio>
-                        <v-radio :label="t.divers" value="divers" color="indigo-darken-2" density="compact"
+                        <v-radio :label="translate.divers" value="divers" color="indigo-darken-2" density="compact"
                             class="mr-2"></v-radio>
                     </v-radio-group>
 
                     <!-- Kategorie -->
-                    <v-select v-model="formData.category" :items="t.items" :rules="[v => !!v || t.rules.category]"
-                        :label="t.categoryLabel" variant="outlined" density="compact" prepend-inner-icon="mdi-tag"
+                    <v-select v-model="formData.category" :items="translate.items" :rules="[v => !!v || translate.rules.category]"
+                        :label="translate.categoryLabel" variant="outlined" density="compact" prepend-inner-icon="mdi-tag"
                         class="mb-3" color="indigo-darken-2" required :disabled="loading">
                     </v-select>
 
                     <!-- Nachricht -->
-                    <v-textarea v-model="formData.message" :label="t.messageLabel"
-                        :rules="[v => !!v || t.rules.message, v => (v && v.length <= 500) || t.rules.messageMax]"
+                    <v-textarea v-model="formData.message" :label="translate.messageLabel"
+                        :rules="[v => !!v || translate.rules.message, v => (v && v.length <= 500) || translate.rules.messageMax]"
                         required variant="outlined" density="compact" prepend-inner-icon="mdi-message-text" class="mb-4"
                         color="indigo-darken-2" rows="4" counter="500" auto-grow :disabled="loading">
                     </v-textarea>
@@ -44,8 +44,8 @@
                             <v-icon color="indigo-darken-2" size="18"
                                 class="mt-1 flex-shrink-0">mdi-shield-lock-outline</v-icon>
                             <p class="text-body-2 text-medium-emphasis ma-0">
-                                <strong class="text-indigo-darken-2">{{ t.privacyTitle }}</strong>
-                                {{ t.privacyText }}
+                                <strong class="text-indigo-darken-2">{{ translate.privacyTitle }}</strong>
+                                {{ translate.privacyText }}
                             </p>
                         </div>
                     </v-sheet>
@@ -53,7 +53,7 @@
                     <v-checkbox v-model="formData.datenschutz" :rules="[v => !!v]" color="indigo-darken-2"
                         density="compact" class="mb-1" :disabled="loading">
                         <template v-slot:label>
-                            <span class="text-body-2">{{ t.privacyCheckbox }}</span>
+                            <span class="text-body-2">{{ translate.privacyCheckbox }}</span>
                         </template>
                     </v-checkbox>
 
@@ -76,18 +76,18 @@
                     class="px-6 font-weight-bold w-100" :disabled="!valid || loading" :loading="loading"
                     @click="submitForm">
                     <v-icon class="mr-2" size="small">mdi-send</v-icon>
-                    {{ t.submit }}
+                    {{ translate.submit }}
                 </v-btn>
 
                 <template v-if="sucess">
                     <v-btn color="indigo-darken-2" variant="outlined" size="default" rounded="pill"
                         class="px-4 font-weight-bold flex-grow-1 mr-2" @click="$router.push('/info')">
                         <v-icon class="mr-1" size="small">mdi-arrow-left</v-icon>
-                        {{ t.back }}
+                        {{ translate.back }}
                     </v-btn>
                     <v-btn color="indigo-darken-2" variant="elevated" size="default" rounded="pill"
                         class="px-4 font-weight-bold flex-grow-1" @click="$router.push('/qr')">
-                        {{ t.next }}
+                        {{ translate.next }}
                         <v-icon class="ml-1" size="small">mdi-arrow-right</v-icon>
                     </v-btn>
                 </template>
@@ -168,7 +168,7 @@ export default {
         };
     },
     computed: {
-        t() {
+        translate() {
             return translations[this.lang.selectedLang] ?? translations.de;
         },
     },
@@ -202,13 +202,13 @@ export default {
                     throw new Error(result.error || 'Unbekannter Fehler');
                 }
 
-                this.successMessage = this.t.successMsg;
+                this.successMessage = this.translate.successMsg;
                 this.sucess = true;
                 this.$refs.form.reset();
 
             } catch (error) {
                 console.error('Fehler:', error);
-                this.errorMessage = this.t.errorMsg;
+                this.errorMessage = this.translate.errorMsg;
             } finally {
                 this.loading = false;
             }

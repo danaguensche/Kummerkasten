@@ -2,7 +2,7 @@
   <v-container fluid class="mobile-page d-flex justify-center">
     <v-card class="mobile-card mx-auto elevation-4 rounded-lg">
       <div class="card-content pa-4 pa-sm-6 text-center">
-        <v-card-title class="text-h6 text-indigo-darken-2 font-weight-bold pa-0 mb-2" primary-title>
+        <v-card-title class="text-h6 text-indigo-darken-2 font-weight-bold pa-0 mb-2 text-left ml-5" primary-title>
           {{ translate.title }}
         </v-card-title>
 

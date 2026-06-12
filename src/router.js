@@ -3,14 +3,9 @@ import KummerkastenPage from './components/pages/KummerkastenPage.vue';
 import Info from './components/Home/Info.vue';
 import Form from './components/Home/Form.vue';
 import QR from './components/Home/QR.vue';
-import Language from './components/Home/Language.vue';
 
 const routes = [{
-        path: '/',
-        redirect: '/language'
-    },
-    {
-        path: '/home',
+        path: '/home' || '/',
         name: 'Home',
         component: KummerkastenPage
     },
@@ -28,11 +23,6 @@ const routes = [{
         path: '/qr',
         name: 'qr',
         component: QR
-    },
-    {
-        path: '/language' || '/' || '',
-        name: 'Language',
-        component: Language
     }
 
 ];

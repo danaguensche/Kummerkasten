@@ -15,7 +15,7 @@ export default {
         Info,
         Form,
         Header,
-        QR,
+        QR
     },
 
 }

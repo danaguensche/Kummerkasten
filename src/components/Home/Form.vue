@@ -31,7 +31,7 @@
                     <v-select v-model="formData.category" :items="translate.items"
                         :rules="[v => !!v || translate.rules.category]" :label="translate.categoryLabel"
                         variant="outlined" density="compact" prepend-inner-icon="mdi-tag" class="mb-3"
-                        color="indigo-darken-2" required :disabled="loading" />
+                        color="indigo-darken-2" required :disabled="loading" multiple clearable chips />
 
                     <v-select v-model="formData.building" :items="translate.buildings"
                         :rules="[v => !!v || translate.rules.building]" :label="translate.buildingLabel"
@@ -52,9 +52,9 @@
 
                     <v-textarea v-model="formData.message" :label="translate.messageLabel" :rules="[
                         v => !!v || translate.rules.message,
-                        v => (v && v.length <= 500) || translate.rules.messageMax
+                        v => (v && v.length <= 2000) || translate.rules.messageMax
                     ]" required variant="outlined" density="compact" prepend-inner-icon="mdi-message-text" class="mb-4"
-                        color="indigo-darken-2" rows="4" counter="500" auto-grow :disabled="loading" />
+                        color="indigo-darken-2" rows="4" counter="2000" auto-grow :disabled="loading" />
 
                     <v-sheet color="indigo-lighten-5" rounded="lg" class="pa-3 mb-3">
                         <div class="d-flex align-start ga-2">
@@ -221,7 +221,7 @@ export default {
             errorMessage: '',
             formData: {
                 gender: '',
-                category: '',
+                category: null,
                 message: '',
                 datenschutz: false
             },

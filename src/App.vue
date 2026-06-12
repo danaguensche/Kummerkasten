@@ -47,13 +47,6 @@ export default {
     gap: 16px;
 }
 
-.mobile-actions {
-    margin-top: auto;
-    display: flex;
-    gap: 12px;
-    padding-top: 8px;
-}
-
 .mobile-btn {
     min-height: 44px;
 }
@@ -69,8 +62,5 @@ export default {
         margin-top: 16px;
     }
 
-    .mobile-actions {
-        flex-direction: column;
-    }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
 <v-container fluid class="mobile-page d-flex justify-center">
     <v-card class="mobile-card mx-auto elevation-4 rounded-lg">
-            <div class="pa-4 pa-sm-6">
-                <v-card-title v-if="selectedLang == 'de'"
+        <div class="card-content pa-4 pa-sm-6 text-center">
+            <v-card-title v-if="selectedLang == 'de'"
                     class="text-h6 text-indigo-darken-2 font-weight-bold pa-0 mb-2">
                     Wähle deine Sprache aus
                 </v-card-title>
@@ -76,17 +76,20 @@ export default {
 </script>
 
 <style scoped>
-.language-wrapper {
-    min-height: 100dvh;
-    align-items: center;
+.language-card {
+  width: 100%;
+  min-height: 340px;
 }
 
-.language-card {
-    width: 100%;
-    max-width: 380px;
+.card-content {
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .language-options {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;

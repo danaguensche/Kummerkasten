@@ -118,23 +118,4 @@ export default {
     border: 1px solid transparent;
 }
 
-@media (max-width: 400px) {
-    .language-wrapper {
-        padding: 12px;
-        align-items: flex-start;
-    }
-
-    .language-card {
-        margin-top: 16px;
-    }
-
-    .language-options {
-        gap: 12px;
-    }
-
-    .language-option {
-        min-height: 120px;
-        padding: 10px;
-    }
-}
 </style>

@@ -150,15 +150,4 @@ export default {
 .float-animation:nth-child(2) { --delay: 1; }
 .float-animation:nth-child(3) { --delay: 2; }
 
-@media (max-width: 420px) {
-  .action-row {
-    flex-direction: column;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .float-animation {
-    animation: none;
-  }
-}
 </style>

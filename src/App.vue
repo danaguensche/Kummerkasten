@@ -51,16 +51,4 @@ export default {
     min-height: 44px;
 }
 
-@media (max-width: 420px) {
-    .mobile-page {
-        align-items: flex-start;
-        padding: 12px;
-    }
-
-    .mobile-card {
-        padding: 20px;
-        margin-top: 16px;
-    }
-
-}
 </style>

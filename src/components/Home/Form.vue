@@ -320,14 +320,5 @@ export default {
   min-height: 0;
 }
 
-@media (max-width: 600px) {
-  .form-wrapper {
-    padding: 12px;
-  }
 
-  .form-card {
-    max-height: calc(100dvh - 24px);
-    border-radius: 16px;
-  }
-}
 </style>

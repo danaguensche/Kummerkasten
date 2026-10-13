@@ -80,7 +80,7 @@ const translations = {
     next: 'Weiter',
   },
   en: {
-    title: 'Your Worry Box',
+    title: 'Your Suggestion Box',
     subtitle: 'Your voice matters – share your\nconcerns with us, anonymous and safe.',
     next: 'Next',
   },

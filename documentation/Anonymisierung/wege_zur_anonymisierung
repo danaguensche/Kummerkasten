@@ -1,0 +1,11 @@
+Art | Erklärung | Anonymität | Risiko / Problem | Eignung
+-- | -- | -- | -- | --
+Datenminimierung | Keine identifizierenden Daten erheben: kein Name, keine E-Mail, keine IP, keine Geräte-ID, kein Login. | Sehr hoch | Kaum Rückfrage- oder Missbrauchskontrolle, Haus und Geschlecht können in kleinen Gruppen Rückschlüsse ermöglichen | Sehr gut
+Keine Speicherung | Formulardaten werden direkt validiert und per E-Mail weitergeleitet, nicht in Datenbank oder Datei gespeichert. | Hoch | Nachricht bei Mailversand-Fehler verloren, Mailserver-Logs und Metadaten prüfen | Sehr gut
+Internes Netzwerk | Zugriff nur aus dem Netzwerk der Einrichtung, ohne individuelle Anmeldung | Hoch gegenüber dem System | Jede Person im Netz kann zugreifen; abhängig von sauberer Netzwerksegmentierung | Gut
+Gemeinsamer Zugangscode | Alle Bewohner erhalten denselben Code | Sehr hoch, keine individuelle Zuordnung möglich | Code leicht weitergebbar, nicht einzeln sperrbar, bei Leak kompletter Austausch nötig | Gut
+Zufällige, nicht personengebundene Tokens | Jede Person erhält zufällig einen zufällig generierten Code, ohne Zuordnungsliste | Hoch, solange Ausgabe und Nutzung nicht protokolliert werden | Mehrfachnutzung verknüpft Nachrichten, Verlust erfordert Sperr- und Ersatzprozess. | Sehr gut
+Einmal-Tokens | Für jede Nachricht ein anderer, einmal nutzbarer Code danach ungültig. | Sehr hoch, Nachrichten nicht über denselben Token verknüpfbar | Mehr Verwaltungs- und Kommunikationsaufwand, Ersatz bei Verlust muss anonym möglich sein | Sehr gut
+Tor / Onion Service | Zugriff über Tor-Netzwerk, Server sieht die IP der nutzenden Person nicht direkt | Sehr hoch gegenüber Server und Netz | Tor-Nutzung erschwert Zugang; „nur Bewohner“ schwer sicherzustellen, höherer Betriebsaufwand | Gering
+Drittanbieter / separater Server | Kummerkasten läuft außerhalb der IT der Einrichtung | Hoch gegenüber interner IT | Vertrauen in Anbieter nötig | Sehr gut
+Trennung von Rollen | Token-Ausgabe, technische Prüfung und Nachrichtenbearbeitung liegen bei unterschiedlichen Personen  | Hoch | Nur mit klaren Prozessen, Berechtigungen und Vertrauen umsetzbar | Sehr gut
